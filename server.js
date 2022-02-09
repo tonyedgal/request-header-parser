@@ -21,7 +21,7 @@ app.get("/api/hello", function (req, res) {
 
 headerObject = {};
 app.get("/api/whoami", (req, res) => {
-  headerObject["ipadrress"] = req.socket.remoteAddress;
+  headerObject["ipaddress"] = req.ip;
   headerObject["language"] = req.get("Accept-Language");
   headerObject["software"] = req.get("User-Agent");
 
